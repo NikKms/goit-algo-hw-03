@@ -1,0 +1,22 @@
+Index: get_numbers_ticket.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/get_numbers_ticket.py b/get_numbers_ticket.py
+new file mode 100644
+--- /dev/null	(date 1727882026542)
++++ b/get_numbers_ticket.py	(date 1727882026542)
+@@ -0,0 +1,12 @@
++import  random
++
++def get_numbers_ticket(min: int, max: int, quantity: int)-> list:
++    # check entry value, where min >= 1 and max <= 1000
++    if min > max or min < 1 or max > 1000 or quantity> max - min:
++        return []
++
++    # Using random.sample to generate unique random numbers
++    return sorted(random.sample(range(min, max+1), quantity))
++
++print(get_numbers_ticket(1,1000,999))
++
